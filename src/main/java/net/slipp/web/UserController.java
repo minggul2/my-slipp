@@ -17,7 +17,7 @@ public class UserController {
 	public String create(User user) {
 		System.out.println("user : " + user);
 		users.add(user);
-		return "redirect:index";
+		return "redirect:list";
 	}
 	
 	@GetMapping("/list")
@@ -25,4 +25,5 @@ public class UserController {
 		model.addAttribute("users", users);
 		return "list";
 	}
+	
 }
